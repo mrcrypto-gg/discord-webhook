@@ -31,7 +31,7 @@ function createEmbed(repo, branch, url, commits, size) {
             iconURL: `https://github.com/${latest.author.username}.png?size=32`,
         })
         .setDescription(`${getChangeLog(commits, size)}`)
-        .addField('Compare', `[\`${latest.id.substring(0, 6)}\`](${url})`, true)
+        .addField('Compare', url)
         .addField('Branch', branch, true)
         .setTimestamp(Date.parse(latest.timestamp))
 }
