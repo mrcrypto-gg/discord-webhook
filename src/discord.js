@@ -27,7 +27,7 @@ function createEmbed(repo, branch, url, commits, size) {
         .setColor(0x00bb22)
         //.setTitle(size + (size == 1 ? " Commit was " : " Commits were ") + "added to " + repo + " (" + branch + ")")
         .setAuthor({
-            name: `${size} ${size === 1 ? 'commit was ' : 'commits were'} pushed by ${latest.author.name}`,
+            name: `${size} ${size === 1 ? 'commit was' : 'commits were'} pushed by [${latest.author.url}](${latest.author.username})`,
             iconURL: `https://github.com/${latest.author.username}.png?size=32`,
         })
         .setDescription(`${getChangeLog(commits, size)}`)
