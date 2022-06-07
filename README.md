@@ -1,4 +1,4 @@
-#discord-webhook
+# discord-webhook
 
 ## Setup
 
