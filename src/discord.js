@@ -29,21 +29,16 @@ function createEmbed(repo, branch, url, commits, size) {
             name: `${size} ${size === 1 ? 'commit was' : 'commits were'} pushed by ${latest.author.username}`,
             iconURL: `https://github.com/${latest.author.username}.png?size=32`,
         })
-        .setDescription(`${getChangeLog(commits, size)}`)
+        .setDescription(`${getChangeLog(commits)}`)
         .addField('Compare', `[${repo}](${url})`, true)
         .addField('Branch', branch, true)
         .setTimestamp(Date.parse(latest.timestamp))
 }
 
 
-function getChangeLog(commits, size) {
+function getChangeLog(commits) {
     let changelog = ''
     for (const i in commits) {
-        if (i > 7) {
-            changelog += `+ ${size - i} more...\n`
-            break
-        }
-
         const commit = commits[i]
         const sha = commit.id.substring(0, 6)
         changelog += `[\`${sha}\`](${commit.url}) — ${commit.message}\n`
