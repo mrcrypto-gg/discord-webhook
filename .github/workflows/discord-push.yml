@@ -7,7 +7,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v1
       - name: Run Discord Webhook
-        uses: mrcrypto-gg/discord-webhook@main
+        uses: mrcrypto-gg/discord-webhook@dev
         with:
           id: ${{ secrets.DISCORD_WEBHOOK_ID }}
           token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
