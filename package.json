@@ -19,7 +19,7 @@
   "author": "Thomas Bnt",
   "license": "GPL-3.0",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.1.1",
     "discord.js": "^13.6.0",
     "child-process-promise": "^2.2.1",
